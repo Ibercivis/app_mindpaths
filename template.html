@@ -1,12 +1,12 @@
-<link href="/semantics/css/skin.css" rel="stylesheet" type="text/css">
-<link href="/semantics/css/swatchWords.css" rel="stylesheet" type="text/css" />
-<link href="/fonts.googleapis.com/css?family=Nunito:400" rel="stylesheet" type="text/css">
-<script src="/semantics/js/modernizr.js" type="text/javascript"></script>
-<script src="/semantics/js/jquery.swatchWords.js" type="text/javascript"></script>
-<script src="/semantics/js/game.js" type="text/javascript"></script>
+<link href="/static/app_mindpaths/css/skin.css" rel="stylesheet" type="text/css">
+<link href="/static/app_mindpaths/css/swatchWords.css" rel="stylesheet" type="text/css" />
+<link href="//fonts.googleapis.com/css?family=Nunito:400" rel="stylesheet" type="text/css">
+<script src="/static/app_mindpaths/js/modernizr.js" type="text/javascript"></script>
+<script src="/static/app_mindpaths/js/jquery.swatchWords.js" type="text/javascript"></script>
+<script src="/static/app_mindpaths/js/game.js" type="text/javascript"></script>
 <script type="text/javascript">
 	app_shortname= 'Semantics';
-	pybossa.setEndpoint("pybossa\");
+	//pybossa.setEndpoint("pybossa");
 	newWords();
 </script>
 <div class="gameBody">
@@ -23,27 +23,27 @@
 	<!--Header Div-->
 	<div id="headerDiv" style="display: block; margin-left: auto; margin-right: auto; width: 1024px; height: 40px;">
 		<a id="info-button" target="_blank" href="#infoDialog" data-toggle="modal" title="Experiment info"> 
-			<img style="left: 860px" class="gameHeaderButton" src="http://pybossa.socientize.eu/semantics/images/info.png"
-				onmouseover="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/infoHover.png');"
-	 			onmouseout="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/info.png');" />
+			<img style="left: 860px" class="gameHeaderButton" src="/static/app_mindpaths/img/info.png"
+				onmouseover="javascript:ChangeImage(this,'/static/app_mindpaths/img/infoHover.png');"
+	 			onmouseout="javascript:ChangeImage(this,'/static/app_mindpaths/img/info.png');" />
 		</a>
 		<a href="javascript:openShareWindow('http://twitter.com/share?text=Contribute%20with%20our%20project!&url=https://pybossa.socientize.eu/pybossa/app/Semantics');\"
 			data-toggle="tooltip" title="Click to Share on Twitter"> 
-			<img class="gameHeaderButton" style="left: 870px" src="https://pybossa.socientize.eu/semantics/images/twitter.png"
-				onmouseover="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/twitterHover.png');"
-		 		onmouseout="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/twitter.png');" />
+			<img class="gameHeaderButton" style="left: 870px" src="/static/app_mindpaths/img/twitter.png"
+				onmouseover="javascript:ChangeImage(this,'/static/app_mindpaths/img/twitterHover.png');"
+		 		onmouseout="javascript:ChangeImage(this,'/static/app_mindpaths/img/twitter.png');" />
 		</a>
 		<a href=\"javascript:openShareWindow('http://www.facebook.com/sharer.php?u=https://pybossa.socientize.eu/pybossa/app/Semantics');"
 			data-toggle="tooltip" title="Click to Share on Facebook"> <img class="gameHeaderButton" style="left: 880px"
-			src="http://pybossa.socientize.eu/semantics/images/face.png"
-			onmouseover="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/faceHover.png');"
-		  onmouseout="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/face.png');" /></a>
+			src="/static/app_mindpaths/img/face.png"
+			onmouseover="javascript:ChangeImage(this,'/static/app_mindpaths/img/faceHover.png');"
+		  onmouseout="javascript:ChangeImage(this,'/static/app_mindpaths/img/face.png');" /></a>
 		<a href="javascript:openShareWindow('https://plus.google.com/share?url=https://pybossa.socientize.eu/pybossa/app/Semantics');"
 			data-toggle="tooltip" title="Click to Share on Google+"> 
 			<img class="gameHeaderButton" style="left: 890px" 
-				src="http://pybossa.socientize.eu/semantics/images/google.png"
-				onmouseover="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/googleHover.png');"
-				onmouseout="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/google.png');"/>
+				src="/static/app_mindpaths/img/google.png"
+				onmouseover="javascript:ChangeImage(this,'/static/app_mindpaths/img/googleHover.png');"
+				onmouseout="javascript:ChangeImage(this,'/static/app_mindpaths/img/google.png');"/>
 		</a>
 		<label id="lblQuestion" class="questionLabel"></label>
 	</div>
@@ -52,24 +52,24 @@
 			<div id="sw-container" class="sw-container"></div>
 		</section>
 		<!--start word sphere-->
-		<img src="http://pybossa.socientize.eu/semantics/images/sphereL.png" style="position: relative; left: 130px; top: -60px" /> 
+		<img src="/static/app_mindpaths/img/sphereL.png" style="position: relative; left: 130px; top: -60px" /> 
 		<label id="lblActualWord" class="WordLabel" style="position: relative; top: -166px; left: 155px; width: 140px;"></label>
-		<img src="http://pybossa.socientize.eu/semantics/images/arrow.gif" style="position: relative; left: 572px; top: -273px" />
+		<img src="/static/app_mindpaths/img/arrow.gif" style="position: relative; left: 572px; top: -273px" />
 		<!--end word sphere-->
-		<img src="http://pybossa.socientize.eu/semantics/images/sphereR.png"
+		<img src="/static/app_mindpaths/img/sphereR.png"
 			style="position: relative; left: 657px; top: -275px" /> 
 		<label id="lblEndWord" class="WordLabel" style="position: relative; top: -381px; left: 726px; width: 140px; cursor: default"></label>
 		<!--Left buttons-->
 			<div id="buttonsLeft" style="position: relative; top: -472px; left: 0px; width: 80px">
 				<a id="lnkReset" href="javascript:startOver();" data-toggle="tooltip" title="Click to start again"> 
-					<img id="imgResetButton" src="http://pybossa.socientize.eu/semantics/images/reset.png"
-						onmouseover="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/resetHover.png');"
-						onmouseout="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/reset.png');" />
+					<img id="imgResetButton" src="/static/app_mindpaths/img/reset.png"
+						onmouseover="javascript:ChangeImage(this,'/static/app_mindpaths/img/resetHover.png');"
+						onmouseout="javascript:ChangeImage(this,'/static/app_mindpaths/img/reset.png');" />
 				</a> 
 				<a data-toggle="tooltip" title="Click to get a new word pair" href="javascript:newWords();"> 
-					<img src="http://pybossa.socientize.eu/semantics/images/newWords.png"
-						onmouseover="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/newWordsHover.png');"
-						onmouseout="javascript:ChangeImage(this,'http://pybossa.socientize.eu/semantics/images/newWords.png');" />
+					<img src="/static/app_mindpaths/img/newWords.png"
+						onmouseover="javascript:ChangeImage(this,'/static/app_mindpaths/img/newWordsHover.png');"
+						onmouseout="javascript:ChangeImage(this,'/static/app_mindpaths/img/newWords.png');" />
 				</a>
 			</div>
 			<!--progress bars-->
@@ -88,33 +88,33 @@
 		<div class="bottomDiv">
 		<!--Row-->
 		<div class="rowDiv">
-			<img class="rowImage" id="wordImg0"  src="http://pybossa.socientize.eu/semantics/images/startrow.png" />
+			<img class="rowImage" id="wordImg0"  src="/static/app_mindpaths/img/startrow.png" />
 			<img class="rowImage" id="wordImg1"  src="" /> 
-			<img class="rowImage" id="wordImg2"  src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg3"  src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg4"  src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg5"  src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg6"  src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg7"  src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg8"  src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg9"  src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg10" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg11" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg12" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg13" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg14" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg15" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg16" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg17" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg18" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-		  <img class="rowImage" id="wordImg19" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg20" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg21" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg22" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg23" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg24" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" id="wordImg25" src="http://pybossa.socientize.eu/semantics/images/empty_row.png" />
-			<img class="rowImage" src=\"http://pybossa.socientize.eu/semantics/images/empty_row.png\" />
+			<img class="rowImage" id="wordImg2"  src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg3"  src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg4"  src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg5"  src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg6"  src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg7"  src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg8"  src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg9"  src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg10" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg11" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg12" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg13" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg14" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg15" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg16" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg17" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg18" src="/static/app_mindpaths/img/empty_row.png" />
+		  <img class="rowImage" id="wordImg19" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg20" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg21" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg22" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg23" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg24" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" id="wordImg25" src="/static/app_mindpaths/img/empty_row.png" />
+			<img class="rowImage" src="/static/app_mindpaths/img/empty_row.png" />
 		</div>
 		<div id="wordLabels" style="position: relative; top: -8px; left: 55px;">
 			<label id="wordLbl0"  style="top: 86px; left: -140px; color: #2b3126; height: 20px" class="rotatedLabel regularLabel">WORD</label> 
@@ -184,7 +184,7 @@
 		<label class="dialogCaption" id="H2">Mind Paths</label>
 	</div>
 	<div class="modal-body">
-		<img src="http://pybossa.socientize.eu/semantics/images/infopic.png" style="float: right; margin-top: 10px" />
+		<img src="/static/app_mindpaths/img/infopic.png" style="float: right; margin-top: 10px" />
 		<p><strong>What is the perceived relation between words?</strong>
 			<br /><br /> 
 			This is still a complex issue for semantic specialists and\r\n\t\t\tstill a major challenge for science and innovation as it's a very
